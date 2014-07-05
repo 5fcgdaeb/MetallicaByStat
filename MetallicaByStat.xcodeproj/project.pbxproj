@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBEA8052196831FB009B7A57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA8051196831FB009B7A57 /* Foundation.framework */; };
+		BBEA8054196831FB009B7A57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA8053196831FB009B7A57 /* CoreGraphics.framework */; };
+		BBEA8056196831FB009B7A57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA8055196831FB009B7A57 /* UIKit.framework */; };
+		BBEA805C196831FB009B7A57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBEA805A196831FB009B7A57 /* InfoPlist.strings */; };
+		BBEA805E196831FB009B7A57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA805D196831FB009B7A57 /* main.m */; };
+		BBEA8062196831FB009B7A57 /* MA_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA8061196831FB009B7A57 /* MA_AppDelegate.m */; };
+		BBEA8065196831FB009B7A57 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBEA8063196831FB009B7A57 /* Main_iPhone.storyboard */; };
+		BBEA8068196831FB009B7A57 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBEA8066196831FB009B7A57 /* Main_iPad.storyboard */; };
+		BBEA806B196831FB009B7A57 /* MA_FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA806A196831FB009B7A57 /* MA_FirstViewController.m */; };
+		BBEA806E196831FB009B7A57 /* MA_SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA806D196831FB009B7A57 /* MA_SecondViewController.m */; };
+		BBEA8070196831FB009B7A57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBEA806F196831FB009B7A57 /* Images.xcassets */; };
+		BBEA8077196831FB009B7A57 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA8076196831FB009B7A57 /* XCTest.framework */; };
+		BBEA8078196831FB009B7A57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA8051196831FB009B7A57 /* Foundation.framework */; };
+		BBEA8079196831FB009B7A57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA8055196831FB009B7A57 /* UIKit.framework */; };
+		BBEA8081196831FB009B7A57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBEA807F196831FB009B7A57 /* InfoPlist.strings */; };
+		BBEA8083196831FB009B7A57 /* MetallicaByStatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA8082196831FB009B7A57 /* MetallicaByStatTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBEA807A196831FB009B7A57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBEA8046196831FA009B7A57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBEA804D196831FB009B7A57;
+			remoteInfo = MetallicaByStat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BBEA804E196831FB009B7A57 /* MetallicaByStat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetallicaByStat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBEA8051196831FB009B7A57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BBEA8053196831FB009B7A57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BBEA8055196831FB009B7A57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BBEA8059196831FB009B7A57 /* MetallicaByStat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MetallicaByStat-Info.plist"; sourceTree = "<group>"; };
+		BBEA805B196831FB009B7A57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BBEA805D196831FB009B7A57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BBEA805F196831FB009B7A57 /* MetallicaByStat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MetallicaByStat-Prefix.pch"; sourceTree = "<group>"; };
+		BBEA8060196831FB009B7A57 /* MA_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MA_AppDelegate.h; sourceTree = "<group>"; };
+		BBEA8061196831FB009B7A57 /* MA_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MA_AppDelegate.m; sourceTree = "<group>"; };
+		BBEA8064196831FB009B7A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		BBEA8067196831FB009B7A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		BBEA8069196831FB009B7A57 /* MA_FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MA_FirstViewController.h; sourceTree = "<group>"; };
+		BBEA806A196831FB009B7A57 /* MA_FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MA_FirstViewController.m; sourceTree = "<group>"; };
+		BBEA806C196831FB009B7A57 /* MA_SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MA_SecondViewController.h; sourceTree = "<group>"; };
+		BBEA806D196831FB009B7A57 /* MA_SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MA_SecondViewController.m; sourceTree = "<group>"; };
+		BBEA806F196831FB009B7A57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BBEA8075196831FB009B7A57 /* MetallicaByStatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetallicaByStatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBEA8076196831FB009B7A57 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BBEA807E196831FB009B7A57 /* MetallicaByStatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MetallicaByStatTests-Info.plist"; sourceTree = "<group>"; };
+		BBEA8080196831FB009B7A57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BBEA8082196831FB009B7A57 /* MetallicaByStatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetallicaByStatTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBEA804B196831FB009B7A57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEA8054196831FB009B7A57 /* CoreGraphics.framework in Frameworks */,
+				BBEA8056196831FB009B7A57 /* UIKit.framework in Frameworks */,
+				BBEA8052196831FB009B7A57 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBEA8072196831FB009B7A57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEA8077196831FB009B7A57 /* XCTest.framework in Frameworks */,
+				BBEA8079196831FB009B7A57 /* UIKit.framework in Frameworks */,
+				BBEA8078196831FB009B7A57 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBEA8045196831FA009B7A57 = {
+			isa = PBXGroup;
+			children = (
+				BBEA8057196831FB009B7A57 /* MetallicaByStat */,
+				BBEA807C196831FB009B7A57 /* MetallicaByStatTests */,
+				BBEA8050196831FB009B7A57 /* Frameworks */,
+				BBEA804F196831FB009B7A57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBEA804F196831FB009B7A57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBEA804E196831FB009B7A57 /* MetallicaByStat.app */,
+				BBEA8075196831FB009B7A57 /* MetallicaByStatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBEA8050196831FB009B7A57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBEA8051196831FB009B7A57 /* Foundation.framework */,
+				BBEA8053196831FB009B7A57 /* CoreGraphics.framework */,
+				BBEA8055196831FB009B7A57 /* UIKit.framework */,
+				BBEA8076196831FB009B7A57 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBEA8057196831FB009B7A57 /* MetallicaByStat */ = {
+			isa = PBXGroup;
+			children = (
+				BBEA8060196831FB009B7A57 /* MA_AppDelegate.h */,
+				BBEA8061196831FB009B7A57 /* MA_AppDelegate.m */,
+				BBEA8063196831FB009B7A57 /* Main_iPhone.storyboard */,
+				BBEA8066196831FB009B7A57 /* Main_iPad.storyboard */,
+				BBEA8069196831FB009B7A57 /* MA_FirstViewController.h */,
+				BBEA806A196831FB009B7A57 /* MA_FirstViewController.m */,
+				BBEA806C196831FB009B7A57 /* MA_SecondViewController.h */,
+				BBEA806D196831FB009B7A57 /* MA_SecondViewController.m */,
+				BBEA806F196831FB009B7A57 /* Images.xcassets */,
+				BBEA8058196831FB009B7A57 /* Supporting Files */,
+			);
+			path = MetallicaByStat;
+			sourceTree = "<group>";
+		};
+		BBEA8058196831FB009B7A57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBEA8059196831FB009B7A57 /* MetallicaByStat-Info.plist */,
+				BBEA805A196831FB009B7A57 /* InfoPlist.strings */,
+				BBEA805D196831FB009B7A57 /* main.m */,
+				BBEA805F196831FB009B7A57 /* MetallicaByStat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBEA807C196831FB009B7A57 /* MetallicaByStatTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBEA8082196831FB009B7A57 /* MetallicaByStatTests.m */,
+				BBEA807D196831FB009B7A57 /* Supporting Files */,
+			);
+			path = MetallicaByStatTests;
+			sourceTree = "<group>";
+		};
+		BBEA807D196831FB009B7A57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBEA807E196831FB009B7A57 /* MetallicaByStatTests-Info.plist */,
+				BBEA807F196831FB009B7A57 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBEA804D196831FB009B7A57 /* MetallicaByStat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBEA8086196831FB009B7A57 /* Build configuration list for PBXNativeTarget "MetallicaByStat" */;
+			buildPhases = (
+				BBEA804A196831FB009B7A57 /* Sources */,
+				BBEA804B196831FB009B7A57 /* Frameworks */,
+				BBEA804C196831FB009B7A57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetallicaByStat;
+			productName = MetallicaByStat;
+			productReference = BBEA804E196831FB009B7A57 /* MetallicaByStat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBEA8074196831FB009B7A57 /* MetallicaByStatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBEA8089196831FB009B7A57 /* Build configuration list for PBXNativeTarget "MetallicaByStatTests" */;
+			buildPhases = (
+				BBEA8071196831FB009B7A57 /* Sources */,
+				BBEA8072196831FB009B7A57 /* Frameworks */,
+				BBEA8073196831FB009B7A57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBEA807B196831FB009B7A57 /* PBXTargetDependency */,
+			);
+			name = MetallicaByStatTests;
+			productName = MetallicaByStatTests;
+			productReference = BBEA8075196831FB009B7A57 /* MetallicaByStatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBEA8046196831FA009B7A57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MA_;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = GuvenBolukbasi;
+				TargetAttributes = {
+					BBEA8074196831FB009B7A57 = {
+						TestTargetID = BBEA804D196831FB009B7A57;
+					};
+				};
+			};
+			buildConfigurationList = BBEA8049196831FA009B7A57 /* Build configuration list for PBXProject "MetallicaByStat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBEA8045196831FA009B7A57;
+			productRefGroup = BBEA804F196831FB009B7A57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBEA804D196831FB009B7A57 /* MetallicaByStat */,
+				BBEA8074196831FB009B7A57 /* MetallicaByStatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBEA804C196831FB009B7A57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEA8068196831FB009B7A57 /* Main_iPad.storyboard in Resources */,
+				BBEA8070196831FB009B7A57 /* Images.xcassets in Resources */,
+				BBEA8065196831FB009B7A57 /* Main_iPhone.storyboard in Resources */,
+				BBEA805C196831FB009B7A57 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBEA8073196831FB009B7A57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEA8081196831FB009B7A57 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBEA804A196831FB009B7A57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEA806E196831FB009B7A57 /* MA_SecondViewController.m in Sources */,
+				BBEA806B196831FB009B7A57 /* MA_FirstViewController.m in Sources */,
+				BBEA8062196831FB009B7A57 /* MA_AppDelegate.m in Sources */,
+				BBEA805E196831FB009B7A57 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBEA8071196831FB009B7A57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEA8083196831FB009B7A57 /* MetallicaByStatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBEA807B196831FB009B7A57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBEA804D196831FB009B7A57 /* MetallicaByStat */;
+			targetProxy = BBEA807A196831FB009B7A57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBEA805A196831FB009B7A57 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBEA805B196831FB009B7A57 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BBEA8063196831FB009B7A57 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBEA8064196831FB009B7A57 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		BBEA8066196831FB009B7A57 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBEA8067196831FB009B7A57 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		BBEA807F196831FB009B7A57 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBEA8080196831FB009B7A57 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBEA8084196831FB009B7A57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBEA8085196831FB009B7A57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBEA8087196831FB009B7A57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MetallicaByStat/MetallicaByStat-Prefix.pch";
+				INFOPLIST_FILE = "MetallicaByStat/MetallicaByStat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BBEA8088196831FB009B7A57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MetallicaByStat/MetallicaByStat-Prefix.pch";
+				INFOPLIST_FILE = "MetallicaByStat/MetallicaByStat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BBEA808A196831FB009B7A57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MetallicaByStat.app/MetallicaByStat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MetallicaByStat/MetallicaByStat-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MetallicaByStatTests/MetallicaByStatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BBEA808B196831FB009B7A57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MetallicaByStat.app/MetallicaByStat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MetallicaByStat/MetallicaByStat-Prefix.pch";
+				INFOPLIST_FILE = "MetallicaByStatTests/MetallicaByStatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBEA8049196831FA009B7A57 /* Build configuration list for PBXProject "MetallicaByStat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBEA8084196831FB009B7A57 /* Debug */,
+				BBEA8085196831FB009B7A57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBEA8086196831FB009B7A57 /* Build configuration list for PBXNativeTarget "MetallicaByStat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBEA8087196831FB009B7A57 /* Debug */,
+				BBEA8088196831FB009B7A57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BBEA8089196831FB009B7A57 /* Build configuration list for PBXNativeTarget "MetallicaByStatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBEA808A196831FB009B7A57 /* Debug */,
+				BBEA808B196831FB009B7A57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBEA8046196831FA009B7A57 /* Project object */;
+}
