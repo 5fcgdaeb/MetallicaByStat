@@ -50,90 +50,90 @@ static NSMutableDictionary* cities;
     
     NSMutableDictionary* votesBySong = [[NSMutableDictionary alloc] init];
     
-    NSString* cityString = [self cityHTML];
-    NSData* data = [cityString dataUsingEncoding:NSUTF16StringEncoding];
-    
-    NSArray *tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultLabel']");
-    
-    NSMutableArray* allSongs = [[NSMutableArray alloc] init];
-    for (NSDictionary* node in tdNodes) {
-        NSArray* childArray = node[@"nodeChildArray"];
-        NSDictionary* nodeDetails = childArray[0];
-        NSString* songName = nodeDetails[@"nodeContent"];
-        [allSongs addObject:songName];
-        
-    }
-    
-    tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultTotal']");
-    
-    NSMutableArray* allResults = [[NSMutableArray alloc] init];
-    for (NSDictionary* node in tdNodes) {
-        NSArray* childArray = node[@"nodeChildArray"];
-        NSDictionary* nodeDetails = childArray[0];
-        NSString* numberInString = nodeDetails[@"nodeContent"];
-        numberInString = [numberInString stringByReplacingOccurrencesOfString:@"," withString:@""];
-        [allResults addObject:[NSNumber numberWithInt:numberInString.intValue]];
-    }
-    
-    for (int i = 0 ; i < allSongs.count ; i++) {
-        NSString* songName = allSongs[i];
-        NSNumber* voteCount = allResults[i];
-        
-        if (votesBySong[songName]) {
-            NSNumber* existingVoteCount = votesBySong[songName];
-            NSNumber* newCount = [NSNumber numberWithInt:existingVoteCount.intValue + voteCount.intValue];
-            votesBySong[songName] = newCount;
-        }
-        else {
-            votesBySong[songName] = voteCount;
-        }
-    }
-    
-//    for (NSNumber* cityCode in [cities allKeys]) {
-//        NSString* urlString = [NSString stringWithFormat:@"http://www.metallicabyrequest.com/results.php?s=%d", cityCode.intValue];
+//    NSString* cityString = [self cityHTML];
+//    NSData* data = [cityString dataUsingEncoding:NSUTF16StringEncoding];
+//    
+//    NSArray *tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultLabel']");
+//    
+//    NSMutableArray* allSongs = [[NSMutableArray alloc] init];
+//    for (NSDictionary* node in tdNodes) {
+//        NSArray* childArray = node[@"nodeChildArray"];
+//        NSDictionary* nodeDetails = childArray[0];
+//        NSString* songName = nodeDetails[@"nodeContent"];
+//        [allSongs addObject:songName];
 //        
-//        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-//        [request setURL:[NSURL URLWithString:urlString]];;
-//        NSURLResponse* response;
-//        NSError* error = nil;
+//    }
+//    
+//    tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultTotal']");
+//    
+//    NSMutableArray* allResults = [[NSMutableArray alloc] init];
+//    for (NSDictionary* node in tdNodes) {
+//        NSArray* childArray = node[@"nodeChildArray"];
+//        NSDictionary* nodeDetails = childArray[0];
+//        NSString* numberInString = nodeDetails[@"nodeContent"];
+//        numberInString = [numberInString stringByReplacingOccurrencesOfString:@"," withString:@""];
+//        [allResults addObject:[NSNumber numberWithInt:numberInString.intValue]];
+//    }
+//    
+//    for (int i = 0 ; i < allSongs.count ; i++) {
+//        NSString* songName = allSongs[i];
+//        NSNumber* voteCount = allResults[i];
 //        
-//        NSData* data = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&error];
-//        NSArray *tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultLabel']");
-//        
-//        NSMutableArray* allSongs = [[NSMutableArray alloc] init];
-//        for (NSDictionary* node in tdNodes) {
-//            NSArray* childArray = node[@"nodeChildArray"];
-//            NSDictionary* nodeDetails = childArray[0];
-//            NSString* songName = nodeDetails[@"nodeContent"];
-//            [allSongs addObject:songName];
-//            
+//        if (votesBySong[songName]) {
+//            NSNumber* existingVoteCount = votesBySong[songName];
+//            NSNumber* newCount = [NSNumber numberWithInt:existingVoteCount.intValue + voteCount.intValue];
+//            votesBySong[songName] = newCount;
 //        }
-//        
-//        tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultTotal']");
-//        
-//        NSMutableArray* allResults = [[NSMutableArray alloc] init];
-//        for (NSDictionary* node in tdNodes) {
-//            NSArray* childArray = node[@"nodeChildArray"];
-//            NSDictionary* nodeDetails = childArray[0];
-//            NSString* numberInString = nodeDetails[@"nodeContent"];
-//            numberInString = [numberInString stringByReplacingOccurrencesOfString:@"," withString:@""];
-//            [allResults addObject:[NSNumber numberWithInt:numberInString.intValue]];
-//        }
-//        
-//        for (int i = 0 ; i < allSongs.count ; i++) {
-//            NSString* songName = allSongs[i];
-//            NSNumber* voteCount = allResults[i];
-//            
-//            if (votesBySong[songName]) {
-//                NSNumber* existingVoteCount = votesBySong[songName];
-//                NSNumber* newCount = [NSNumber numberWithInt:existingVoteCount.intValue + voteCount.intValue];
-//                votesBySong[songName] = newCount;
-//            }
-//            else {
-//                votesBySong[songName] = voteCount;
-//            }
+//        else {
+//            votesBySong[songName] = voteCount;
 //        }
 //    }
+    
+    for (NSNumber* cityCode in [cities allKeys]) {
+        NSString* urlString = [NSString stringWithFormat:@"http://www.metallicabyrequest.com/results.php?s=%d", cityCode.intValue];
+        
+        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+        [request setURL:[NSURL URLWithString:urlString]];;
+        NSURLResponse* response;
+        NSError* error = nil;
+        
+        NSData* data = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&error];
+        NSArray *tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultLabel']");
+        
+        NSMutableArray* allSongs = [[NSMutableArray alloc] init];
+        for (NSDictionary* node in tdNodes) {
+            NSArray* childArray = node[@"nodeChildArray"];
+            NSDictionary* nodeDetails = childArray[0];
+            NSString* songName = nodeDetails[@"nodeContent"];
+            [allSongs addObject:songName];
+            
+        }
+        
+        tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultTotal']");
+        
+        NSMutableArray* allResults = [[NSMutableArray alloc] init];
+        for (NSDictionary* node in tdNodes) {
+            NSArray* childArray = node[@"nodeChildArray"];
+            NSDictionary* nodeDetails = childArray[0];
+            NSString* numberInString = nodeDetails[@"nodeContent"];
+            numberInString = [numberInString stringByReplacingOccurrencesOfString:@"," withString:@""];
+            [allResults addObject:[NSNumber numberWithInt:numberInString.intValue]];
+        }
+        
+        for (int i = 0 ; i < allSongs.count ; i++) {
+            NSString* songName = allSongs[i];
+            NSNumber* voteCount = allResults[i];
+            
+            if (votesBySong[songName]) {
+                NSNumber* existingVoteCount = votesBySong[songName];
+                NSNumber* newCount = [NSNumber numberWithInt:existingVoteCount.intValue + voteCount.intValue];
+                votesBySong[songName] = newCount;
+            }
+            else {
+                votesBySong[songName] = voteCount;
+            }
+        }
+    }
  
     
     NSMutableArray* orderedResults = [[NSMutableArray alloc] initWithCapacity:votesBySong.count];

@@ -21,8 +21,8 @@
     
     MA_CityParser* parser = [[MA_CityParser alloc] init];
     self.orderedVotes = [parser parse];
-    NSNumber* numb = [self.orderedVotes valueForKeyPath:@"@sum.voteCount"];
-    self.totalCount = numb.intValue;
+    //NSNumber* numb = [self.orderedVotes valueForKeyPath:@"@sum.voteCount"];
+    self.totalCount = 11762;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -37,13 +37,19 @@
     
     UILabel* song = (UILabel*) [cell.contentView viewWithTag:1];
     UILabel* vote = (UILabel*) [cell.contentView viewWithTag:2];
+    UIView* foreGround = (UIView*) [cell.contentView viewWithTag:3];
     UILabel* percent = (UILabel*) [cell.contentView viewWithTag:4];
     
     MA_SongVote* songVote = self.orderedVotes[indexPath.row];
     song.text = songVote.songName;
     vote.text = [NSString stringWithFormat:@"%d", songVote.voteCount];
-    int percentage = (int) ((songVote.voteCount / self.totalCount) * 100);
+    int percentage = (int) ((songVote.voteCount * 100.0f) / self.totalCount);
     percent.text = [NSString stringWithFormat:@"%d%%", percentage];
+    
+    CGRect oldframe = foreGround.frame;
+    oldframe.size.width = (280 * percentage) / 100;
+    
+    foreGround.frame = oldframe;
     
     return cell;
 }
