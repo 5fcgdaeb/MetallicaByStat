@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MA_CityParser.h"
+#import "MA_SongVote.h"
 
-@interface MA_FirstViewController : UIViewController
+@interface MA_FirstViewController : UIViewController <UITableViewDataSource>
 
 @end

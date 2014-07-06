@@ -23,6 +23,14 @@
 		BBEA8079196831FB009B7A57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA8055196831FB009B7A57 /* UIKit.framework */; };
 		BBEA8081196831FB009B7A57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBEA807F196831FB009B7A57 /* InfoPlist.strings */; };
 		BBEA8083196831FB009B7A57 /* MetallicaByStatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA8082196831FB009B7A57 /* MetallicaByStatTests.m */; };
+		BBEA809319683E70009B7A57 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA808E19683E70009B7A57 /* TFHpple.m */; };
+		BBEA809419683E70009B7A57 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA809019683E70009B7A57 /* TFHppleElement.m */; };
+		BBEA809519683E70009B7A57 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA809219683E70009B7A57 /* XPathQuery.m */; };
+		BBEA809719683E92009B7A57 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA809619683E92009B7A57 /* libxml2.dylib */; };
+		BBEA809A19683F0D009B7A57 /* MA_CityParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA809919683F0D009B7A57 /* MA_CityParser.m */; };
+		BBEA809B19683F0D009B7A57 /* MA_CityParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA809919683F0D009B7A57 /* MA_CityParser.m */; };
+		BBEA809E1969DEB7009B7A57 /* MA_SongVote.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA809D1969DEB7009B7A57 /* MA_SongVote.m */; };
+		BBEA809F1969DEB7009B7A57 /* MA_SongVote.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA809D1969DEB7009B7A57 /* MA_SongVote.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +66,17 @@
 		BBEA807E196831FB009B7A57 /* MetallicaByStatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MetallicaByStatTests-Info.plist"; sourceTree = "<group>"; };
 		BBEA8080196831FB009B7A57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BBEA8082196831FB009B7A57 /* MetallicaByStatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MetallicaByStatTests.m; sourceTree = "<group>"; };
+		BBEA808D19683E70009B7A57 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = SOURCE_ROOT; };
+		BBEA808E19683E70009B7A57 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = SOURCE_ROOT; };
+		BBEA808F19683E70009B7A57 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = SOURCE_ROOT; };
+		BBEA809019683E70009B7A57 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = SOURCE_ROOT; };
+		BBEA809119683E70009B7A57 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = SOURCE_ROOT; };
+		BBEA809219683E70009B7A57 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = SOURCE_ROOT; };
+		BBEA809619683E92009B7A57 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		BBEA809819683F0D009B7A57 /* MA_CityParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MA_CityParser.h; sourceTree = "<group>"; };
+		BBEA809919683F0D009B7A57 /* MA_CityParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MA_CityParser.m; sourceTree = "<group>"; };
+		BBEA809C1969DEB7009B7A57 /* MA_SongVote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MA_SongVote.h; sourceTree = "<group>"; };
+		BBEA809D1969DEB7009B7A57 /* MA_SongVote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MA_SongVote.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEA809719683E92009B7A57 /* libxml2.dylib in Frameworks */,
 				BBEA8054196831FB009B7A57 /* CoreGraphics.framework in Frameworks */,
 				BBEA8056196831FB009B7A57 /* UIKit.framework in Frameworks */,
 				BBEA8052196831FB009B7A57 /* Foundation.framework in Frameworks */,
@@ -106,6 +126,7 @@
 		BBEA8050196831FB009B7A57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBEA809619683E92009B7A57 /* libxml2.dylib */,
 				BBEA8051196831FB009B7A57 /* Foundation.framework */,
 				BBEA8053196831FB009B7A57 /* CoreGraphics.framework */,
 				BBEA8055196831FB009B7A57 /* UIKit.framework */,
@@ -126,7 +147,12 @@
 				BBEA806C196831FB009B7A57 /* MA_SecondViewController.h */,
 				BBEA806D196831FB009B7A57 /* MA_SecondViewController.m */,
 				BBEA806F196831FB009B7A57 /* Images.xcassets */,
+				BBEA808C19683E62009B7A57 /* Third_Party */,
 				BBEA8058196831FB009B7A57 /* Supporting Files */,
+				BBEA809819683F0D009B7A57 /* MA_CityParser.h */,
+				BBEA809919683F0D009B7A57 /* MA_CityParser.m */,
+				BBEA809C1969DEB7009B7A57 /* MA_SongVote.h */,
+				BBEA809D1969DEB7009B7A57 /* MA_SongVote.m */,
 			);
 			path = MetallicaByStat;
 			sourceTree = "<group>";
@@ -158,6 +184,19 @@
 				BBEA807F196831FB009B7A57 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBEA808C19683E62009B7A57 /* Third_Party */ = {
+			isa = PBXGroup;
+			children = (
+				BBEA808D19683E70009B7A57 /* TFHpple.h */,
+				BBEA808E19683E70009B7A57 /* TFHpple.m */,
+				BBEA808F19683E70009B7A57 /* TFHppleElement.h */,
+				BBEA809019683E70009B7A57 /* TFHppleElement.m */,
+				BBEA809119683E70009B7A57 /* XPathQuery.h */,
+				BBEA809219683E70009B7A57 /* XPathQuery.m */,
+			);
+			name = Third_Party;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +247,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = GuvenBolukbasi;
 				TargetAttributes = {
+					BBEA804D196831FB009B7A57 = {
+						DevelopmentTeam = 4G38FW68S3;
+					};
 					BBEA8074196831FB009B7A57 = {
 						TestTargetID = BBEA804D196831FB009B7A57;
 					};
@@ -259,8 +301,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEA809E1969DEB7009B7A57 /* MA_SongVote.m in Sources */,
+				BBEA809419683E70009B7A57 /* TFHppleElement.m in Sources */,
+				BBEA809519683E70009B7A57 /* XPathQuery.m in Sources */,
+				BBEA809319683E70009B7A57 /* TFHpple.m in Sources */,
 				BBEA806E196831FB009B7A57 /* MA_SecondViewController.m in Sources */,
 				BBEA806B196831FB009B7A57 /* MA_FirstViewController.m in Sources */,
+				BBEA809A19683F0D009B7A57 /* MA_CityParser.m in Sources */,
 				BBEA8062196831FB009B7A57 /* MA_AppDelegate.m in Sources */,
 				BBEA805E196831FB009B7A57 /* main.m in Sources */,
 			);
@@ -270,7 +317,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBEA809F1969DEB7009B7A57 /* MA_SongVote.m in Sources */,
 				BBEA8083196831FB009B7A57 /* MetallicaByStatTests.m in Sources */,
+				BBEA809B19683F0D009B7A57 /* MA_CityParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,8 +446,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MetallicaByStat/MetallicaByStat-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "MetallicaByStat/MetallicaByStat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -410,8 +465,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MetallicaByStat/MetallicaByStat-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "MetallicaByStat/MetallicaByStat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
