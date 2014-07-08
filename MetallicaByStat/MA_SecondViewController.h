@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MA_SecondViewController : UIViewController
+@interface MA_SecondViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

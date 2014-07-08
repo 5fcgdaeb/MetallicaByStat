@@ -21,8 +21,9 @@
     
     MA_CityParser* parser = [[MA_CityParser alloc] init];
     self.orderedVotes = [parser parse];
-    //NSNumber* numb = [self.orderedVotes valueForKeyPath:@"@sum.voteCount"];
-    self.totalCount = 11762;
+    NSNumber* numb = [self.orderedVotes valueForKeyPath:@"@sum.voteCount"];
+    //self.totalCount = 11762;
+    self.totalCount = numb.intValue / 17;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

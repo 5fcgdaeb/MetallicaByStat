@@ -50,44 +50,35 @@ static NSMutableDictionary* cities;
     
     NSMutableDictionary* votesBySong = [[NSMutableDictionary alloc] init];
     
-//    NSString* cityString = [self cityHTML];
-//    NSData* data = [cityString dataUsingEncoding:NSUTF16StringEncoding];
-//    
-//    NSArray *tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultLabel']");
-//    
-//    NSMutableArray* allSongs = [[NSMutableArray alloc] init];
-//    for (NSDictionary* node in tdNodes) {
-//        NSArray* childArray = node[@"nodeChildArray"];
-//        NSDictionary* nodeDetails = childArray[0];
-//        NSString* songName = nodeDetails[@"nodeContent"];
-//        [allSongs addObject:songName];
-//        
-//    }
-//    
-//    tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultTotal']");
-//    
-//    NSMutableArray* allResults = [[NSMutableArray alloc] init];
-//    for (NSDictionary* node in tdNodes) {
-//        NSArray* childArray = node[@"nodeChildArray"];
-//        NSDictionary* nodeDetails = childArray[0];
-//        NSString* numberInString = nodeDetails[@"nodeContent"];
-//        numberInString = [numberInString stringByReplacingOccurrencesOfString:@"," withString:@""];
-//        [allResults addObject:[NSNumber numberWithInt:numberInString.intValue]];
-//    }
-//    
-//    for (int i = 0 ; i < allSongs.count ; i++) {
-//        NSString* songName = allSongs[i];
-//        NSNumber* voteCount = allResults[i];
-//        
-//        if (votesBySong[songName]) {
-//            NSNumber* existingVoteCount = votesBySong[songName];
-//            NSNumber* newCount = [NSNumber numberWithInt:existingVoteCount.intValue + voteCount.intValue];
-//            votesBySong[songName] = newCount;
-//        }
-//        else {
-//            votesBySong[songName] = voteCount;
-//        }
-//    }
+    [self populateFileData:votesBySong];
+//    [self populateActualData:votesBySong];
+    
+    NSMutableArray* orderedResults = [[NSMutableArray alloc] initWithCapacity:votesBySong.count];
+    
+    for (NSString* song in [votesBySong allKeys]) {
+        NSNumber* voteCount = votesBySong[song];
+        MA_SongVote* songVote = [[MA_SongVote alloc] init];
+        songVote.songName = song;
+        songVote.voteCount = voteCount.intValue;
+        [orderedResults addObject:songVote];
+    }
+    
+    [orderedResults sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        MA_SongVote* vote1 = (MA_SongVote*) obj1;
+        MA_SongVote* vote2 = (MA_SongVote*) obj2;
+        
+        if (vote1.voteCount > vote2.voteCount) {
+            return NSOrderedAscending;
+        }
+        else {
+            return NSOrderedDescending;
+        }
+    }];
+    
+    return orderedResults;
+}
+
+- (void) populateActualData: (NSMutableDictionary*) votesBySong {
     
     for (NSNumber* cityCode in [cities allKeys]) {
         NSString* urlString = [NSString stringWithFormat:@"http://www.metallicabyrequest.com/results.php?s=%d", cityCode.intValue];
@@ -134,31 +125,50 @@ static NSMutableDictionary* cities;
             }
         }
     }
- 
+}
+
+- (void) populateFileData: (NSMutableDictionary*) votesBySong {
     
-    NSMutableArray* orderedResults = [[NSMutableArray alloc] initWithCapacity:votesBySong.count];
+    NSString* cityString = [self cityHTML];
+    NSData* data = [cityString dataUsingEncoding:NSUTF16StringEncoding];
     
-    for (NSString* song in [votesBySong allKeys]) {
-        NSNumber* voteCount = votesBySong[song];
-        MA_SongVote* songVote = [[MA_SongVote alloc] init];
-        songVote.songName = song;
-        songVote.voteCount = voteCount.intValue;
-        [orderedResults addObject:songVote];
+    NSArray *tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultLabel']");
+    
+    NSMutableArray* allSongs = [[NSMutableArray alloc] init];
+    for (NSDictionary* node in tdNodes) {
+        NSArray* childArray = node[@"nodeChildArray"];
+        NSDictionary* nodeDetails = childArray[0];
+        NSString* songName = nodeDetails[@"nodeContent"];
+        [allSongs addObject:songName];
+        
     }
     
-    [orderedResults sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        MA_SongVote* vote1 = (MA_SongVote*) obj1;
-        MA_SongVote* vote2 = (MA_SongVote*) obj2;
+    tdNodes = PerformHTMLXPathQuery(data, @"//div[@class='resultTotal']");
+    
+    NSMutableArray* allResults = [[NSMutableArray alloc] init];
+    for (NSDictionary* node in tdNodes) {
+        NSArray* childArray = node[@"nodeChildArray"];
+        NSDictionary* nodeDetails = childArray[0];
+        NSString* numberInString = nodeDetails[@"nodeContent"];
+        numberInString = [numberInString stringByReplacingOccurrencesOfString:@"," withString:@""];
+        [allResults addObject:[NSNumber numberWithInt:numberInString.intValue]];
+    }
+    
+    for (int i = 0 ; i < allSongs.count ; i++) {
+        NSString* songName = allSongs[i];
+        NSNumber* voteCount = allResults[i];
         
-        if (vote1.voteCount > vote2.voteCount) {
-            return NSOrderedAscending;
+        if (votesBySong[songName]) {
+            NSNumber* existingVoteCount = votesBySong[songName];
+            NSNumber* newCount = [NSNumber numberWithInt:existingVoteCount.intValue + voteCount.intValue];
+            votesBySong[songName] = newCount;
         }
         else {
-            return NSOrderedDescending;
+            votesBySong[songName] = voteCount;
         }
-    }];
+    }
     
-    return orderedResults;
+    
 }
 
 - (NSString*) cityHTML {

@@ -14,16 +14,39 @@
 
 @implementation MA_SecondViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section { return 4; }
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell* cell = nil;
+    
+    switch (indexPath.row) {
+        case 0:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"VoteCell"];
+            break;
+        case 1:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"AllCell"];
+            break;
+        case 2:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"RareCell"];
+            break;
+        case 3:
+            cell = [tableView dequeueReusableCellWithIdentifier:@"FavCell"];
+            break;
+        default:
+            cell = nil;
+            break;
+    }
+    
+    return cell;
 }
 
 @end
