@@ -18,7 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
+    //[[UITabBar appearance] setTintColor:[UIColor lightGrayColor]];
     MA_CityParser* parser = [[MA_CityParser alloc] init];
     self.orderedVotes = [parser parse];
     NSNumber* numb = [self.orderedVotes valueForKeyPath:@"@sum.voteCount"];
@@ -27,6 +28,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath { return  66.0; }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {return self.orderedVotes.count; }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -43,14 +45,19 @@
     
     MA_SongVote* songVote = self.orderedVotes[indexPath.row];
     song.text = songVote.songName;
-    vote.text = [NSString stringWithFormat:@"%d", songVote.voteCount];
+    NSNumberFormatter *numberFormat = [[NSNumberFormatter alloc] init];
+    numberFormat.usesGroupingSeparator = YES;
+    numberFormat.groupingSeparator = @",";
+    numberFormat.groupingSize = 3;
+    vote.text = [numberFormat stringFromNumber:[NSNumber numberWithInt:songVote.voteCount]];
     int percentage = (int) ((songVote.voteCount * 100.0f) / self.totalCount);
     percent.text = [NSString stringWithFormat:@"%d%%", percentage];
     
-    CGRect oldframe = foreGround.frame;
-    oldframe.size.width = (280 * percentage) / 100;
+    for (NSLayoutConstraint* constraint in foreGround.constraints) {
+        constraint.constant = (280 * percentage) / 100;
+    }
     
-    foreGround.frame = oldframe;
+    [cell needsUpdateConstraints];
     
     return cell;
 }

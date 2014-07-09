@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "header.png"
+      "filename" : "859-bar-chart.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "859-bar-chart@2x.png"
     }
   ],
   "info" : {

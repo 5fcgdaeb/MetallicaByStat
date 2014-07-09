@@ -10,6 +10,6 @@
 #import "MA_CityParser.h"
 #import "MA_SongVote.h"
 
-@interface MA_FirstViewController : UIViewController <UITableViewDataSource>
+@interface MA_FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
