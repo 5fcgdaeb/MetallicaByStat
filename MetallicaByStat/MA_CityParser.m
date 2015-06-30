@@ -50,8 +50,8 @@ static NSMutableDictionary* cities;
     
     NSMutableDictionary* votesBySong = [[NSMutableDictionary alloc] init];
     
-    [self populateFileData:votesBySong];
-//    [self populateActualData:votesBySong];
+//    [self populateFileData:votesBySong];
+    [self populateActualData:votesBySong];
     
     NSMutableArray* orderedResults = [[NSMutableArray alloc] initWithCapacity:votesBySong.count];
     

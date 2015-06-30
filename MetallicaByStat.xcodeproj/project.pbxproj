@@ -538,6 +538,7 @@
 				BBEA8088196831FB009B7A57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBEA8089196831FB009B7A57 /* Build configuration list for PBXNativeTarget "MetallicaByStatTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +547,7 @@
 				BBEA808B196831FB009B7A57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
