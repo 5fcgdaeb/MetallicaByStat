@@ -81,7 +81,7 @@ static NSMutableDictionary* cities;
 - (void) populateActualData: (NSMutableDictionary*) votesBySong {
     
     for (NSNumber* cityCode in [cities allKeys]) {
-        NSString* urlString = [NSString stringWithFormat:@"http://www.metallicabyrequest.com/results.php?s=%d", cityCode.intValue];
+        NSString* urlString = [NSString stringWithFormat:@"https://www.metallicabyrequest.com/results.php?s=%d", cityCode.intValue];
         
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
         [request setURL:[NSURL URLWithString:urlString]];;

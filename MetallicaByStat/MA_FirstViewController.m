@@ -15,24 +15,20 @@
 
 @implementation MA_FirstViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
-    //[[UITabBar appearance] setTintColor:[UIColor lightGrayColor]];
     MA_CityParser* parser = [[MA_CityParser alloc] init];
     self.orderedVotes = [parser parse];
     NSNumber* numb = [self.orderedVotes valueForKeyPath:@"@sum.voteCount"];
     //self.totalCount = 11762;
     self.totalCount = numb.intValue / 17;
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath { return  66.0; }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {return self.orderedVotes.count; }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
@@ -60,6 +56,10 @@
     [cell needsUpdateConstraints];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

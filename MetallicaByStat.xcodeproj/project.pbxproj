@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB64C87520C82B0900F4B61D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB64C87420C82B0900F4B61D /* Launch Screen.storyboard */; };
 		BBEA8052196831FB009B7A57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA8051196831FB009B7A57 /* Foundation.framework */; };
 		BBEA8054196831FB009B7A57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA8053196831FB009B7A57 /* CoreGraphics.framework */; };
 		BBEA8056196831FB009B7A57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBEA8055196831FB009B7A57 /* UIKit.framework */; };
@@ -14,7 +15,6 @@
 		BBEA805E196831FB009B7A57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA805D196831FB009B7A57 /* main.m */; };
 		BBEA8062196831FB009B7A57 /* MA_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA8061196831FB009B7A57 /* MA_AppDelegate.m */; };
 		BBEA8065196831FB009B7A57 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBEA8063196831FB009B7A57 /* Main_iPhone.storyboard */; };
-		BBEA8068196831FB009B7A57 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBEA8066196831FB009B7A57 /* Main_iPad.storyboard */; };
 		BBEA806B196831FB009B7A57 /* MA_FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA806A196831FB009B7A57 /* MA_FirstViewController.m */; };
 		BBEA806E196831FB009B7A57 /* MA_SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBEA806D196831FB009B7A57 /* MA_SecondViewController.m */; };
 		BBEA8070196831FB009B7A57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBEA806F196831FB009B7A57 /* Images.xcassets */; };
@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB64C87420C82B0900F4B61D /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		BBEA804E196831FB009B7A57 /* MetallicaByStat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetallicaByStat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBEA8051196831FB009B7A57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BBEA8053196831FB009B7A57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,7 +56,6 @@
 		BBEA8060196831FB009B7A57 /* MA_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MA_AppDelegate.h; sourceTree = "<group>"; };
 		BBEA8061196831FB009B7A57 /* MA_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MA_AppDelegate.m; sourceTree = "<group>"; };
 		BBEA8064196831FB009B7A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		BBEA8067196831FB009B7A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		BBEA8069196831FB009B7A57 /* MA_FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MA_FirstViewController.h; sourceTree = "<group>"; };
 		BBEA806A196831FB009B7A57 /* MA_FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MA_FirstViewController.m; sourceTree = "<group>"; };
 		BBEA806C196831FB009B7A57 /* MA_SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MA_SecondViewController.h; sourceTree = "<group>"; };
@@ -138,21 +138,21 @@
 		BBEA8057196831FB009B7A57 /* MetallicaByStat */ = {
 			isa = PBXGroup;
 			children = (
+				BB64C87420C82B0900F4B61D /* Launch Screen.storyboard */,
+				BBEA8063196831FB009B7A57 /* Main_iPhone.storyboard */,
 				BBEA8060196831FB009B7A57 /* MA_AppDelegate.h */,
 				BBEA8061196831FB009B7A57 /* MA_AppDelegate.m */,
-				BBEA8063196831FB009B7A57 /* Main_iPhone.storyboard */,
-				BBEA8066196831FB009B7A57 /* Main_iPad.storyboard */,
 				BBEA8069196831FB009B7A57 /* MA_FirstViewController.h */,
 				BBEA806A196831FB009B7A57 /* MA_FirstViewController.m */,
 				BBEA806C196831FB009B7A57 /* MA_SecondViewController.h */,
 				BBEA806D196831FB009B7A57 /* MA_SecondViewController.m */,
-				BBEA806F196831FB009B7A57 /* Images.xcassets */,
-				BBEA808C19683E62009B7A57 /* Third_Party */,
-				BBEA8058196831FB009B7A57 /* Supporting Files */,
 				BBEA809819683F0D009B7A57 /* MA_CityParser.h */,
 				BBEA809919683F0D009B7A57 /* MA_CityParser.m */,
 				BBEA809C1969DEB7009B7A57 /* MA_SongVote.h */,
 				BBEA809D1969DEB7009B7A57 /* MA_SongVote.m */,
+				BBEA806F196831FB009B7A57 /* Images.xcassets */,
+				BBEA808C19683E62009B7A57 /* Third_Party */,
+				BBEA8058196831FB009B7A57 /* Supporting Files */,
 			);
 			path = MetallicaByStat;
 			sourceTree = "<group>";
@@ -279,9 +279,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBEA8068196831FB009B7A57 /* Main_iPad.storyboard in Resources */,
 				BBEA8070196831FB009B7A57 /* Images.xcassets in Resources */,
 				BBEA8065196831FB009B7A57 /* Main_iPhone.storyboard in Resources */,
+				BB64C87520C82B0900F4B61D /* Launch Screen.storyboard in Resources */,
 				BBEA805C196831FB009B7A57 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,14 +350,6 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		BBEA8066196831FB009B7A57 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BBEA8067196831FB009B7A57 /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		BBEA807F196831FB009B7A57 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -401,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -434,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -455,7 +447,9 @@
 					"$(SDKROOT)/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "MetallicaByStat/MetallicaByStat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -474,7 +468,9 @@
 					"$(SDKROOT)/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "MetallicaByStat/MetallicaByStat-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
