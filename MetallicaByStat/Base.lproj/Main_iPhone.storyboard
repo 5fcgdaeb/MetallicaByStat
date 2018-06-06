@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="aNg-ne-2S1">
-                                <rect key="frame" x="27" y="10" width="320" height="100"/>
+                                <rect key="frame" x="27" y="20" width="320" height="100"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="0UA-Km-wwz"/>
@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vTw-GR-QoI">
-                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
+                                <rect key="frame" x="0.0" y="130" width="375" height="488"/>
                                 <color key="backgroundColor" red="0.1647058824" green="0.15686274510000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SongCell" rowHeight="66" id="vRF-AD-L0r">
@@ -102,7 +102,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worldwide!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePg-oL-sJf">
-                                <rect key="frame" x="145" y="98" width="85" height="20"/>
+                                <rect key="frame" x="145" y="108" width="85" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -112,7 +112,7 @@
                         <constraints>
                             <constraint firstItem="ePg-oL-sJf" firstAttribute="top" secondItem="aNg-ne-2S1" secondAttribute="bottom" constant="-12" id="3Of-5w-2jn"/>
                             <constraint firstItem="Uku-mQ-pZ5" firstAttribute="trailing" secondItem="vTw-GR-QoI" secondAttribute="trailing" id="3Vx-49-OEc"/>
-                            <constraint firstItem="aNg-ne-2S1" firstAttribute="top" secondItem="2VE-Yg-loa" secondAttribute="top" constant="10" id="5Ys-f4-hvc"/>
+                            <constraint firstItem="aNg-ne-2S1" firstAttribute="top" secondItem="Uku-mQ-pZ5" secondAttribute="top" id="5Ys-f4-hvc"/>
                             <constraint firstItem="Uku-mQ-pZ5" firstAttribute="centerX" secondItem="ePg-oL-sJf" secondAttribute="centerX" id="7R2-bM-o9F"/>
                             <constraint firstItem="vTw-GR-QoI" firstAttribute="leading" secondItem="Uku-mQ-pZ5" secondAttribute="leading" id="Nda-Pi-K1r"/>
                             <constraint firstItem="Uku-mQ-pZ5" firstAttribute="centerX" secondItem="aNg-ne-2S1" secondAttribute="centerX" id="VtB-Sc-LUH"/>
